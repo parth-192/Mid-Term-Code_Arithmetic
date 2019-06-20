@@ -19,17 +19,19 @@ public class ArithmeticBase
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
-        System.out.println("enter String");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+        System.out.println("enter a operator \n + for addition \n - for substraction \n * for multiplication \n / for division");
+     
+        char operator = sc.next().charAt(0);
+        
+        switch (operator)
         {
-            case "PLUS":
+            case '+':
                 return x + y;
-            case "MINUS":
+            case '-':
                 return x - y;
-            case "TIMES":
+            case '*':
                 return x * y;
-            case "DIVIDE":
+            case '/':
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
